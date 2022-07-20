@@ -1,9 +1,16 @@
 from database import DataBase
+import platform
 import os
 
 switched_on = True
 db = DataBase()
 option = ""
+
+def clear_console():
+    if platform.system() == "Windows":
+        os.system("cls")
+    else:
+        os.system("clear")
 
 def show_menu():
     print()
@@ -16,7 +23,7 @@ def show_menu():
     print()
 
 def show_subjects():
-    os.system("cls")
+    clear_console()
     subjects = db.get_all_subjects()
     len_subjects = len(subjects)
         
@@ -35,7 +42,7 @@ def show_subjects():
         print("No hay materias guardadas")
 
 def add_subjects():
-    os.system("cls")
+    clear_console()
     
     print()
     print("AGREGAR MATERIA")
@@ -56,7 +63,7 @@ def add_subjects():
     db.add_subject(subject)
 
 def delete_subject():
-    os.system("cls")
+    clear_console()
 
     print()
     print("ELIMINAR MATERIA")
@@ -71,7 +78,7 @@ def delete_subject():
     db.delete_subject(subject_id)
 
 def edit_subject():
-    os.system("cls")
+    clear_console()
 
     print()
     print("EDITAR MATERIA")
@@ -127,7 +134,6 @@ while switched_on:
         if option == "5":
             switched_on = False     
             db.close()
-            print(f"Registros afectado/s: {db.connection.affected_rows}")
             print("PROGRAMA TERMINADO")
 
         else:
