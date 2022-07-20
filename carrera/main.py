@@ -24,6 +24,7 @@ def show_subjects():
     print("MATERIAS")
     print("------------------------------------------------------------------------------------------------------------------")
     print()
+    
     if len_subjects > 0:
         for i in range(len_subjects):
             index_list = i + 1
