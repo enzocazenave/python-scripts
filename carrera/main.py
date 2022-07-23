@@ -22,6 +22,7 @@ def show_menu():
     print("5. Salir")
     print()
 
+
 def show_subjects():
     clear_console()
     subjects = db.get_all_subjects()
