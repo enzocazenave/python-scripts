@@ -13,7 +13,7 @@ class CampusGUI:
 
         # Add subject frame
         frame = LabelFrame(self.wind, text = 'Agrega una nueva materia')
-        frame.grid(row = 0, column = 0, columnspan = 3, pady = 20)
+        frame.grid(row = 0, column = 0, columnspan = 3, pady = 10)
 
         # Name input
         Label(frame, text = 'Materia: ').grid(row = 1, column = 0)
@@ -37,10 +37,10 @@ class CampusGUI:
         self.qtty_subjects = Label(text = '')
         self.qtty_subjects.grid(row = 4, column = 0, sticky = W)
 
-        self.aprobadas = Label(text = "")
+        self.aprobadas = Label(text = "", fg = "green")
         self.aprobadas.grid(row = 5, column = 0, sticky = W)
 
-        self.previo = Label(text = "")
+        self.previo = Label(text = "", fg = "red")
         self.previo.grid(row = 6, column = 0, sticky = W)
 
 
@@ -48,7 +48,7 @@ class CampusGUI:
         columns = ('id', 'name', 'grade', 'condition')
 
         self.tree = ttk.Treeview(height = 30, columns = columns, show = 'headings')
-        self.tree.grid(row = 8, column = 0, sticky = W + E, columnspan = 2)
+        self.tree.grid(row = 7, column = 0, sticky = W + E, columnspan = 2)
         self.tree.heading("id", text = "*", anchor = CENTER)
         self.tree.heading("name", text = "Nombre", anchor = CENTER)
         self.tree.heading("grade", text = "Nota", anchor = CENTER)
@@ -139,7 +139,6 @@ class CampusGUI:
             return
 
         name = self.tree.item(self.tree.selection())['values'][1]
-        print(name)
         query = 'DELETE FROM subjects WHERE name = ?'
 
         self.run_query(query, (name, ))
