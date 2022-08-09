@@ -28,3 +28,5 @@ print(f"B: {vector2}")
 print()
 
 print(f"El resultado de AxB es {resultado}")
+
+print(f"\n{vector1} x {vector2} = {resultado}")
