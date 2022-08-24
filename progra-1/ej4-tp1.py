@@ -5,10 +5,14 @@ def calcular_vuelto(precio, dinero_recibido):
         vuelto = dinero_recibido - precio
 
         for billete in billetes:
-            print(f"{vuelto // billete} billetes de {billete}")
+            cuenta = vuelto // billete
+
+            if cuenta != 0: 
+                print(f"{cuenta} billetes de {billete}")
+
             vuelto %= billete
 
     else:
         print("[PROGRAMA] El dinero es insuficiente")
 
-calcular_vuelto(200,520)
+calcular_vuelto(200,1000)
