@@ -1,3 +1,7 @@
+"""
+    ESCRIBIR UNA FUNCION QUE RECIBA UNA LISTA COMO PARÁMETRO Y LA NORMALICE, ES DECIR QUE TODOS SUS ELEMENTOS DEBEN SUMAR 1
+"""
+
 def normalize_list(list):
     normalized_array = list.copy()
     suma = sum(normalized_array)
