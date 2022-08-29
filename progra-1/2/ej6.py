@@ -3,13 +3,13 @@
 """
 
 def normalize_list(list):
-    normalized_array = list.copy()
-    suma = sum(normalized_array)
+    normalized_list = list.copy()
+    suma = sum(normalized_list)
 
-    for i in range(len(normalized_array)):
-        normalized_array[i] /= suma
+    for i in range(len(normalized_list)):
+        normalized_list[i] /= suma
 
-    return normalized_array
+    return normalized_list
 
 # ---------------------------------------------------------------- #
 
