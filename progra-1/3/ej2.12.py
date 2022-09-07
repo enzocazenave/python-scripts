@@ -12,8 +12,6 @@
 socios = []
 informe = []
 
-flag = True
-
 def registrar_socio(numero):
     if numero >= 10000 and numero <= 99999:
         socios.append(numero)
@@ -61,6 +59,8 @@ def mostrar_informe():
             print("%3d" %columna, end='') 
         print()
 
+
+flag = True
 
 while flag:
     numero_de_socio = int(input('Ingrese numero de socio: '))
