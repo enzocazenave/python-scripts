@@ -12,11 +12,12 @@ def probar_funcion(metodo):
     string = input('\nIngrese cadena de texto: ')
     pos_1 = int(input('Numero posicion 1: '))
     pos_2 = int(input('Numero de posicion 2: '))
+    pos = [pos_1, pos_2]
 
     if metodo == 1:
-        return a_eliminar_subcadena(string, [pos_1, pos_2])
+        return a_eliminar_subcadena(string, pos)
     else:
-        return b_eliminar_subcadena(string, [pos_1, pos_2])
+        return b_eliminar_subcadena(string, pos)
 
 def a_eliminar_subcadena(str, pos):
     return str[:pos[0]] + str[pos[1]:]
