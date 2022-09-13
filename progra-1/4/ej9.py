@@ -4,4 +4,4 @@
 """
 
 def rebanador(string, n):
-    return string[n::]
+    return string[n:]
