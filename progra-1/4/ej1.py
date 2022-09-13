@@ -7,15 +7,17 @@
 def es_capicua(str):
     cont = 0
     cont_invertido = len(str) - 1
+    capicua = False
 
     while str[cont] == str[cont_invertido]:
         if cont == cont_invertido:
-            return True
+            capicua = True
+            break
         
         cont += 1
         cont_invertido -= 1
 
-    return False
+    return capicua
 
 
 str = input('\nIngrese una palabra para verificar si es capicua: ')
