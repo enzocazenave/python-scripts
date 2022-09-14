@@ -23,7 +23,7 @@ def es_capicua_1(str):
 def es_capicua_2(str):
     capicua = True
 
-    for i in range(len(str)):
+    for i in range(len(str) // 2):
         if str[i] != str[-i-1]:
             capicua = False
             break
