@@ -9,7 +9,7 @@ def eliminar_comentario(linea):
         return ""
 
     for c in range(len(linea)):
-        if linea[c] == '#' and (not linea[c - 1] == '"' and not linea[c - 1] == "'"):
+        if linea[c] == '#' and (linea[c - 1] != '"' and linea[c - 1] != "'"):
             return linea[:c] + '\n'
             
     return linea        

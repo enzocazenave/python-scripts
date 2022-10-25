@@ -1,4 +1,4 @@
-      # comentario corto
+      # comentario corto\m
 
 """
     dsadsad
@@ -17,7 +17,7 @@
 # hola   # s
 
 #test
-for i in range(50): # comentario corto #
+for i in range(50): # comentario corto #\n
     print(i) # co dsa das dsamentario cortdsa dsa dsa dsa do
 
 numero = "#chiki" # comentario corto
